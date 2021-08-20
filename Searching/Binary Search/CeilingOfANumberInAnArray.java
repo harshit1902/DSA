@@ -7,8 +7,8 @@ public class CeilingOfANumberInAnArray {
         int[] numsDesc={22,18,9,6,3,2,1};
         int target=15;
 
-        System.out.println(ceil(numsDesc,target));
-        System.out.println(ceil(nums,target));
+        System.out.println(ceil(numsDesc,23));
+        System.out.println(ceil(nums,23));
 
     }
 
@@ -37,6 +37,6 @@ public class CeilingOfANumberInAnArray {
             }
         }
 
-        return isAsc?arr[start]:arr[end];
+        return isAsc?(start>=0&&start<=arr.length-1?arr[start]:-1):(end>=0&&end<=arr.length-1?arr[end]:-1);
     }
 }

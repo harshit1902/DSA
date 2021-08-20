@@ -8,8 +8,8 @@ public class FloorOfANumberInAnArray {
         int[] numsDesc={22,18,9,6,3,2,1};
         int target=15;
 
-        System.out.println(floor(numsDesc,target));
-        System.out.println(floor(nums,target));
+        System.out.println(floor(numsDesc,0));
+        System.out.println(floor(nums,0));
 
     }
 
@@ -39,7 +39,7 @@ public class FloorOfANumberInAnArray {
             }
         }
 
-        return isAsc?arr[end]:arr[start];
+        return isAsc?(end>=0&&end<=arr.length-1?arr[end]:-1):(start>=0&&start<=arr.length-1?arr[start]:-1);
     }
 
 }
